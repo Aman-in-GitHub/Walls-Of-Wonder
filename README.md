@@ -1,27 +1,22 @@
-# React + TypeScript + Vite
+# Walls Of Wonder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Walls Of Wonder](https://i.postimg.cc/K8M8Qprb/Screenshot-2023-10-29-184543.png)
 
-Currently, two official plugins are available:
+Walls Of Wonder is your go-to destination for viewing and downloading high-quality wallpapers. Search, filter, and enjoy our vast collection of high-resolution wallpapers for all your devices. The magic of WoW awaits!"
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+WoW is a web platform dedicated to providing a vast collection of high-quality wallpapers for all devices. It allows users to search for their favorite wallpapers based on various criteria, including resolutions, screen sizes, and NSFW (Not Safe For Work) filters. This repository contains the source code, assets, and documentation for the Walls Of Wonder website, built using React and React Query.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **Search and Filter:** Easily search for wallpapers and apply filters based on resolutions, screen sizes, and NSFW preferences.
+- **High-Quality Wallpapers:** Access a vast collection of high-resolution wallpapers suitable for various devices.
+- **View and Download:** View wallpapers in detail and download them directly to your device.
+- **PWA:** Using on mobile devices made easier with Progressive Web Apps
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Usage
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Get Your Next Wallpaper now at: [Walls Of Wonder](https://walls-of-wonder-by-aman.netlify.app/)
+
+> "Because Every Wallpaper Has A Story"
