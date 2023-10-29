@@ -46,7 +46,7 @@ const Navbar = () => {
         >
           <input
             type="text"
-            placeholder="Search Wallpaper"
+            placeholder="Search Wallpapers"
             className=" outline-none px-4 py-2 text-xl rounded-sm dark:bg-[#333333] dark:text-white w-[505px]"
             defaultValue={inputRef.current}
             onChange={(e) => (inputRef.current = e.target.value)}

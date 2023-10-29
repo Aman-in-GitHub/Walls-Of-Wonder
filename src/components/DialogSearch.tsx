@@ -50,13 +50,12 @@ export function DialogSearch() {
             </label>
             <input
               type="text"
-              placeholder="Search"
+              placeholder="Search Wallpapers"
               className="px-3 py-1 font-normal outline-none border focus:border-0 focus:ring-orange-500 focus:ring-2 rounded-sm text-lg w-[95%] text-black dark:text-white"
               style={{
                 background: 'transparent'
               }}
               onChange={(e) => (searchRef.current = e.target.value)}
-              defaultValue=""
             />
           </div>
           <DialogFooter className="sm:justify-start">
