@@ -166,6 +166,8 @@ function Home() {
         return name;
       }
     }
+
+    return '1080p';
   }
 
   return (
