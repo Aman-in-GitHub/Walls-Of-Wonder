@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between px-2 md:px-10 lg:px-20 bg-[#f4f4f4] dark:bg-[#232323] select-none py-2 md:py-4">
+    <nav className="flex items-center justify-between px-2 md:px-10 lg:px-20 bg-[#f4f4f4] dark:bg-[#232323] select-none py-2 md:py-4 font-primary">
       <div className="w-12 md:w-16">
         <a href="">
           <img src={logo} alt="Logo" />

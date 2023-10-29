@@ -3,11 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+    <link rel="manifest" href="manifest.json" />
     <title>Walls Of Wonder</title>
   </head>
   <body class="bg-[#fcfcfc] dark:bg-[#131313]">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <script type="module">
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker
+            .register('/service-worker.js')
+            .then(function (registration) {
+              console.log(
+                'Service Worker registered with scope:',
+                registration.scope
+              );
+            })
+            .catch(function (error) {
+              console.error('Service Worker registration failed:', error);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

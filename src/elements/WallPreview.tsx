@@ -8,7 +8,7 @@ const WallPreview = ({ image }) => {
   const bg = image.thumbs.large;
 
   async function downloadImage(url, name) {
-    const imageURL = `http://localhost:3000/hosted-image?imageUrl=${url}`;
+    const imageURL = `https://wallsofwonder.onrender.com/hosted-image?imageUrl=${url}`;
 
     try {
       setIsDownloading(true);
@@ -38,30 +38,30 @@ const WallPreview = ({ image }) => {
   }
   return (
     <div
-      className="bg-center bg-cover bg-no-repeat aspect-video cursor-pointer group rounded-sm"
+      className="bg-center bg-cover bg-no-repeat aspect-video cursor-pointer group rounded-sm font-primary"
       style={{
         backgroundImage: `url(${bg})`
       }}
     >
       <div className="h-full w-full justify-between items-end flex opacity-0 group-hover:opacity-100 duration-300">
         <a
-          href={`http://localhost:3000/hosted-image?imageUrl=${image.path}`}
+          href={`https://wallsofwonder.onrender.com/hosted-image?imageUrl=${image.path}`}
           target="_blank"
-          className="bg-orange-400 dark:bg-orange-900 shadow text-white px-3 py-1 text-lg font-semibold rounded-sm"
+          className="bg-orange-400 dark:bg-orange-900 shadow text-white px-3 py-1 font-semibold rounded-sm"
         >
           Preview
         </a>
         {isDownloading ? (
           <button
             disabled
-            className="bg-orange-400 dark:bg-orange-900 shadow text-white px-3 py-1 text-lg font-semibold flex items-center disabled:opacity-75 rounded-sm"
+            className="bg-orange-400 dark:bg-orange-900 shadow text-white px-3 py-1 font-semibold flex items-center disabled:opacity-75 rounded-sm"
           >
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
             Downloading
           </button>
         ) : (
           <button
-            className="bg-orange-400 dark:bg-orange-900 shadow text-white px-3 py-1 text-lg font-semibold rounded-sm"
+            className="bg-orange-400 dark:bg-orange-900 shadow text-white px-3 py-1 font-semibold rounded-sm"
             onClick={() => downloadImage(image.path, image.id)}
           >
             Download
