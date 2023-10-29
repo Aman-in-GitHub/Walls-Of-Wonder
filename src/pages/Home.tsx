@@ -248,11 +248,12 @@ function Home() {
           </div>
         )}
 
-        {data?.pages[0]?.data.length > 8 && !hasNextPage && (
-          <footer className="px-2 md:px-10 lg:px-20 bg-orange-400 py-2">
-            <Footer />
-          </footer>
-        )}
+        {data?.pages[0]?.data.length > (screenWidth < 726 ? 2 : 8) &&
+          !hasNextPage && (
+            <footer className="px-2 md:px-10 lg:px-20 bg-orange-400 py-2">
+              <Footer />
+            </footer>
+          )}
       </main>
       <button
         id="goToTop"

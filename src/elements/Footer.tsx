@@ -12,7 +12,12 @@ const Footer = () => {
       <p className="md:text-lg lg:text-2xl font-semibold text-white">
         Every Wallpaper Has A Story
       </p>
-      <Github className="scale-[1.2] text-white cursor-pointer hover:scale-[1.3] duration-300 active:scale-[1.1]" />
+      <a
+        href="https://github.com/Aman-in-GitHub/Walls-Of-Wonder"
+        target="_blank"
+      >
+        <Github className="scale-[1.2] text-white cursor-pointer hover:scale-[1.3] duration-300 active:scale-[1.1]" />
+      </a>
     </div>
   );
 };
