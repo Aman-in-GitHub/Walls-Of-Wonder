@@ -91,8 +91,8 @@ app.listen(port, () => {
 const refreshServer = async () => {
   try {
     const url = process.env.SERVER_URL;
-    const response = await fetch(`${url}/api/refresh`);
-    const data = await response.json();
+    const response = await axios.get(`${url}/api/refresh`);
+    const data = response.data;
     console.log('Server refreshed:', data);
   } catch (error) {
     console.error('Error refreshing server:', error);
