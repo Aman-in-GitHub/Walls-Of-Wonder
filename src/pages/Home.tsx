@@ -36,17 +36,11 @@ const resolutions = {
 
 const mediaQueryPortrait = window.matchMedia('(orientation: portrait)');
 const mediaQueryLandscape = window.matchMedia('(orientation: landscape)');
-import useLocalStorage from '../lib/useLocalStorage';
-import { useToast } from '@/components/ui/use-toast';
 
 function Home() {
   const { ref, inView } = useInView();
 
-  const { getItem, setItem } = useLocalStorage();
-
   const { query } = useContext(QueryContext);
-
-  const { toast } = useToast();
 
   const [orientation, setOrientation] = useState(null);
   const [resolution, setResolution] = useState(null);
@@ -54,18 +48,6 @@ function Home() {
   const [quality, setQuality] = useState('1920x1080');
   const [hasNSFW, setHasNSFW] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    if (!getItem(`WOW-warning`)) {
-      toast({
-        title: 'Thank you for your patience 🧡',
-        description:
-          'First time processing might be a bit slow as we are on a free tier :('
-      });
-
-      setItem(`WOW-warning`, 'shown');
-    }
-  }, []);
 
   useEffect(() => {
     if (inView) {
