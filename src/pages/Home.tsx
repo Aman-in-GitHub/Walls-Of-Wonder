@@ -11,6 +11,8 @@ import { Switch } from '@/components/ui/switch';
 
 import NOTFOUND from '/notFound.svg';
 
+import { useToast } from '@/components/ui/use-toast';
+
 import {
   Select,
   SelectContent,
@@ -48,6 +50,28 @@ function Home() {
   const [quality, setQuality] = useState('1920x1080');
   const [hasNSFW, setHasNSFW] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+
+  const { toast } = useToast();
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch('https://wallsofwonder.onrender.com/');
+
+        console.log(response.status);
+      } catch (error) {
+        console.error('Error:', error);
+        toast({
+          title: 'Sorry for the inconvenience',
+          description:
+            "This site has reached it's monthly spend limit. Please try again later.",
+          duration: 69000
+        });
+      }
+    }
+
+    fetchData();
+  }, []);
 
   useEffect(() => {
     if (inView) {
