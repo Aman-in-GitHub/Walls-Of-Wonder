@@ -15,8 +15,4 @@ WoW is a web platform dedicated to providing a vast collection of high-quality w
 - **View and Download:** View wallpapers in detail and download them directly to your device.
 - **PWA:** Using on mobile devices made easier with Progressive Web Apps
 
-## Usage
-
-Get Your Next Wallpaper now at: [Walls Of Wonder](https://walls-of-wonder-by-aman.netlify.app/)
-
 > "Because Every Wallpaper Has A Story"
